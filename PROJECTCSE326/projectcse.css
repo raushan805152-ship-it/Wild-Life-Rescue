@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body{
+    background-color: #f4f7f3;
+    color: #26352b;
+}
+.sidebar{
+    border-radius: 10px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: #174d2b;
+    padding: 20px;
+    left: 0;
+    top: 0;
+}
+.title {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu-link{
+    color: white;
+    padding: 18px;
+    text-decoration:none;
+    text-align:left;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+.menu-link:hover{
+    background-color: #4caf50;
+}
+
+/* Main Container */
+
+.Container {
+    margin-left: 270px;
+    padding: 30px;
+    background-color: #f4f8f2;
+    min-height: 100vh;
+}
+
+/* All Sections */
+
+.Container section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Heading */
+
+.Container h2 {
+    color: #174d2b;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.Container h3 {
+    color: #236b3c;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+
+.Container p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Home Boxes */
+
+.box {
+    display: inline-block;
+    width: 190px;
+    background-color: #e8f5e9;
+    padding: 25px;
+    margin: 15px 10px 0 0;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 5px solid #2e7d32;
+}
+
+.box h3 {
+    color: #174d2b;
+    font-size: 30px;
+}
+
+/* Forms */
+
+.form {
+    background-color: #f8fbf7;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #d5e6d5;
+    max-width: 650px;
+}
+
+/* Form Labels */
+
+.form label {
+    display: block;
+    color: #174d2b;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Input, Select, Textarea */
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b7cbb7;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+}
+
+/* Textarea */
+
+.form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Focus Effect */
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+/* Buttons */
+
+.form button {
+    background-color: #236b3c;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+
+.form button:hover {
+    background-color: #174d2b;
+}
+
+/* Search Record */
+
+#searchRecord {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #b7cbb7;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Table */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* Table Heading */
+
+.table th {
+    background-color: #174d2b;
+    color: white;
+    padding: 14px;
+    text-align: center;
+}
+
+/* Table Data */
+
+.table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #333;
+}
+
+/* Alternate Row Color */
+
+.table tr:nth-child(even) {
+    background-color: #e8f5e9;
+}
+
+/* Table Hover */
+
+.table tr:hover {
+    background-color: #c8e6c9;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    .Container {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .Container section {
+        padding: 20px;
+    }
+
+    .box {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
+    #record {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 700px;
+    }
+}
+/* Contact Us Section */
+
+#Contact {
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #f0f8f0;
+    border-radius: 10px;
+}
+
+#Contact h2 {
+    text-align: center;
+    color: #225c35;
+    margin-bottom: 15px;
+}
+
+#Contact > p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    color: #225c35;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.contact-form .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #225c35;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #347d49;
+}
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild life Rescue Management</title>
+    <link rel="stylesheet" href="projectcse.css">
+
+</head>
+<body>
+    
+    <header class="sidebar">
+        <h1 class="title">Wild Life Rescue Management</h1>
+        <nav class="menu">
+            <a href="#home" class="menu-link">Home</a>
+            <a href="#About" class="menu-link">About</a>
+            <a href="#Rescue" class="menu-link">Rescue case Rajistation</a>
+            <a href="#Treatment" class="menu-link">Treatments</a>
+            <a href="#Release" class="menu-link">Release</a>
+            <a href="#record" class="menu-link">Record</a>
+        </nav>
+    </header>
+    <main class="Container">
+        <section id="home">
+            <h2 class="heading"> Welcome to Wildlife Rescue Dashboard</h2>
+            <p>Track every injured animal from rescue to treatment,
+            rehabilitation and release, all in one place.</p>
+            <div class="box">
+                <h3>0</h3>
+                <p>total case</p>
+            </div>
+            <div class="box">
+                <h3>0</h3>
+                <p>Under Treatment</p>
+            </div>
+            <div class="box">
+                <h3>0</h3>
+                <p>Rehabilitation</p>
+            </div>
+            <div class="box">
+                <h3>0</h3>
+                <p>released</p>
+            </div>
+        </section>
+        <section id="About">
+            <h2>About Wildlife Rescue</h2>
+            <p>Wildlife Rescue Management System helps manage
+                injured animals, rescue operations, medical treatment,
+                rehabilitation and safe release</p>
+        </section>
+        <section id="Rescue">
+            <h2>Rescue Registration</h2>
+            <form class="form">
+                <label>Animal name:</label>
+                <input type="text" name="animalname" required>
+                <label>Animal Species:</label>
+                <input type="text" name="animal Species" required>
+                <label>Animal Age</label>
+                <input type="text" name="age">
+                <label>Rescue Date</label>
+                <input type="date" name="Rescue Date" required>
+                <label>Location</label>
+                <input type="text" name="location" required>
+                <label>Animal Condition:</label>
+                <select name="condition">
+                    <option>injured</option>
+                    <option>Critical</option>
+                    <option>Sick</option>
+                    <option>Unhealthy</option>
+                </select>
+                <label>Rescue Description:</label>
+                <textarea name="description"></textarea>
+                <button type="submit">Register Rescue</button>
+            </form>
+        </section>
+        <section id="Treatment">
+            <h2>Animal treatment</h2>
+            <p>Manage treatment medical</p>
+            <form class="form">
+                <label>Animal ID</label>
+                <input type="text" name="animal" required>
+                <label>Animal Name</label>
+                <input type="text" name="animalname" required>
+                <label>Animal Species</label>
+                <input type="text" name="animmalspecies" required>
+                <label>Desease/Injury</label>
+                <input type="text" name="disease" required>
+                <label>Docter Name</label>
+                <input type="text" name="doctorname" required>
+                <label>Treatment Date</label>
+                <input type="text" name="treatmentdate" required>
+                <label>Medicine Details</label>
+                <input type="text" name="medicinedetail" required>
+                <label>Treatment status</label>
+                <select name="status">
+                    <option>Under treatment</option>
+                    <option>Recovering</option>
+                    <option>Recovered</option>
+                    <option>Critical</option>
+                </select>
+                <button type="submit">Save treatment</button>
+            </form>
+        </section>
+        <section id="Release">
+            <h2>Animal Release</h2>
+            <p>Manage recovered animals and their safe release</p>
+            <form class="form">
+                <label>Animal ID</label>
+                <input type="text" name="animalid" required>
+                <label>Animal Name:</label>
+                <input type="text" name="animalname" required>
+                <label>Animal Species</label>
+                <input type="text" name="animmalspecies" required>
+                <label>Release Date</label>
+                <input type="text" name="releasedate" required>
+                <label>Release Location</label>
+                <input type="text" name="releaselocation" required>
+                <label>Animal health status</label>
+                <select name="health">
+                    <option>Healthy</option>
+                    <option>Fully covered</option>
+                </select>
+                <label>Release Description</label>
+                <textarea name="Description"></textarea>
+                <button type="submit">Release Animal</button>
+            </form>
+        </section>
+        <section id="record">
+                <label>Wildlife Record</label>
+                <p>add and manage animal record.</p>
+                <form class="form">
+                    <label>Animal ID</label>
+                    <input type="text" name="animalid" required>
+                    <label>Animal Name:</label>
+                    <input type="text" name="animalname" required>
+                    <label>Animal species</label>
+                    <input type="text" name="animalspecies" required>
+                    <label>Animal Age</label>
+                    <input type="text" name="animalage" required>
+                    <label>Rescue Date</label>
+                    <input type="text" name="rescuedate" required>
+                    <label>Rescue Location</label>
+                    <input type="text" name="rescuelocation" required>
+                    <label>Animal Condition</label>
+                    <select id="Condition">
+                        <option>Injured</option>
+                        <option>Critical</option>
+                        <option>Sick</option>
+                        <option>Healthy</option>
+                    </select>
+                    <label>Animal Status:</label>
+                    <select id="Status">
+                        <option>Under Treatment</option>
+                        <option>Recovering</option>
+                        <option>Recovered</option>
+                        <option>Released</option>
+                    </select>
+                    <button type="submit">Add record</button>
+                </form>
+                <br>
+                <h3>All animal Records</h3>
+                <input type="text" id="searchRecord" placeholder="search Animal ID or Name">
+                <table class="table">
+                    <tr>
+                        <th>Animal ID</th>
+                        <th>Name</th>
+                        <th>Species</th>
+                        <th>age</th>
+                        <th>Rescue Date</th>
+                        <th>Location</th>
+                        <th>Condition</th>
+                    </tr>
+                    <tbody id="recordTable"></tbody>
+                </table>
+        </section>
+        <!-- Contact Us Section -->
+<section id="Contact">
+    <h2>Contact Us</h2>
+    <p>
+        If you find an injured or helpless wild animal,
+        contact our wildlife rescue team.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+
+            <p><strong>Organization:</strong>
+            Wildlife Rescue Management</p>
+
+            <p><strong>Phone:</strong>
+            +91 9876543210</p>
+
+            <p><strong>Email:</strong>
+            wildliferescue@gmail.com</p>
+
+            <p><strong>Address:</strong>
+            Wildlife Rescue Centre, India</p>
+
+            <p><strong>Working Hours:</strong>
+            24 Hours Emergency Support</p>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
